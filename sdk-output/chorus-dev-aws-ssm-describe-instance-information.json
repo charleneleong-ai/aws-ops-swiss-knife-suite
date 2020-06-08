@@ -1,0 +1,113 @@
+{
+    "InstanceInformationList": [
+        {
+            "InstanceId": "i-0238239e4e508f376",
+            "PingStatus": "ConnectionLost",
+            "LastPingDateTime": "2020-05-09T02:19:52.668000+12:00",
+            "AgentVersion": "2.3.978.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.96.202",
+            "ComputerName": "EC2AMAZ-A9DG8BG",
+            "AssociationStatus": "Failed",
+            "LastAssociationExecutionDate": "2020-05-09T02:19:42+12:00",
+            "AssociationOverview": {
+                "DetailedStatus": "Failed",
+                "InstanceAssociationStatusAggregatedCount": {
+                    "Failed": 2,
+                    "Skipped": 1,
+                    "Success": 1
+                }
+            }
+        },
+        {
+            "InstanceId": "i-00aed24a68844c3a4",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T16:41:56.858000+12:00",
+            "AgentVersion": "2.3.1319.0",
+            "IsLatestVersion": true,
+            "PlatformType": "Linux",
+            "PlatformName": "Amazon Linux",
+            "PlatformVersion": "2",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.96.208",
+            "ComputerName": "ip-10-238-96-208.ap-southeast-2.compute.internal",
+            "AssociationStatus": "Success",
+            "LastAssociationExecutionDate": "2020-06-08T16:27:52+12:00",
+            "LastSuccessfulAssociationExecutionDate": "2020-06-08T16:27:52+12:00",
+            "AssociationOverview": {
+                "InstanceAssociationStatusAggregatedCount": {
+                    "Skipped": 1,
+                    "Success": 3
+                }
+            }
+        },
+        {
+            "InstanceId": "i-02e47d79e4a7bcf5a",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T16:41:35.249000+12:00",
+            "AgentVersion": "2.3.1319.0",
+            "IsLatestVersion": true,
+            "PlatformType": "Linux",
+            "PlatformName": "Amazon Linux",
+            "PlatformVersion": "2",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "172.31.7.230",
+            "ComputerName": "ip-172-31-7-230.ap-southeast-2.compute.internal",
+            "AssociationStatus": "Success",
+            "LastAssociationExecutionDate": "2020-06-08T16:37:55+12:00",
+            "LastSuccessfulAssociationExecutionDate": "2020-06-08T16:37:55+12:00",
+            "AssociationOverview": {
+                "InstanceAssociationStatusAggregatedCount": {
+                    "Skipped": 1,
+                    "Success": 3
+                }
+            }
+        },
+        {
+            "InstanceId": "i-01074c1dd16a394f0",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T16:40:45.862000+12:00",
+            "AgentVersion": "2.3.1319.0",
+            "IsLatestVersion": true,
+            "PlatformType": "Linux",
+            "PlatformName": "Amazon Linux",
+            "PlatformVersion": "2",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.96.167",
+            "ComputerName": "ip-10-238-96-167.ap-southeast-2.compute.internal",
+            "AssociationStatus": "Success",
+            "LastAssociationExecutionDate": "2020-06-08T16:38:12+12:00",
+            "LastSuccessfulAssociationExecutionDate": "2020-06-08T16:38:12+12:00",
+            "AssociationOverview": {
+                "InstanceAssociationStatusAggregatedCount": {
+                    "Skipped": 1,
+                    "Success": 3
+                }
+            }
+        },
+        {
+            "InstanceId": "i-05fba4717a69b760a",
+            "PingStatus": "ConnectionLost",
+            "LastPingDateTime": "2020-05-04T14:15:15.915000+12:00",
+            "AgentVersion": "2.3.978.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.96.175",
+            "ComputerName": "EC2AMAZ-RGRKNK4",
+            "AssociationStatus": "Failed",
+            "LastAssociationExecutionDate": "2020-05-04T10:44:15.721000+12:00",
+            "LastSuccessfulAssociationExecutionDate": "2020-03-23T10:22:56+13:00",
+            "AssociationOverview": {
+                "DetailedStatus": "Failed",
+                "InstanceAssociationStatusAggregatedCount": {
+                    "Failed": 2,
+                    "Skipped": 1,
+                    "Success": 1
+                }
+            }
+        }
+    ]
+}

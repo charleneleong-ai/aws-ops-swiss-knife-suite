@@ -1,0 +1,3302 @@
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0fb14c7fc09a4eea2",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-07-22T21:43:36+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-217.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.217",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2018-01-23 20:11:34 GMT)",
+                    "SubnetId": "subnet-3eeb145a",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-22T21:43:37+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-c67ca649"
+                            }
+                        }
+                    ],
+                    "ClientToken": "rLhAT1469223816180",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-22T21:43:36+00:00",
+                                "AttachmentId": "eni-attach-1ae874d9",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-elasticsearch-prod-sg",
+                                    "GroupId": "sg-aedeb2ca"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:76:41:af:b9:3f",
+                            "NetworkInterfaceId": "eni-edaf7794",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-217.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.217",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-217.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.217"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-3eeb145a",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-elasticsearch-prod-sg",
+                            "GroupId": "sg-aedeb2ca"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-prod03-az1"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-05f633da4a1d2a3b4"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-03be7a3e5e49f8508",
+                    "InstanceId": "i-016bb7cfc1dc7abf8",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "temp-deloitte-chorus-jumphost",
+                    "LaunchTime": "2019-08-14T00:24:57+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "Platform": "windows",
+                    "PrivateDnsName": "ip-10-238-64-252.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.64.252",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2019-09-10 00:38:14 GMT)",
+                    "SubnetId": "subnet-47c5d423",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2019-08-14T00:24:57+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-024579726828d6781"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2019-08-14T00:24:57+00:00",
+                                "AttachmentId": "eni-attach-08eedaa4ddfbf2c78",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus_prod_mes_bastion_sg",
+                                    "GroupId": "sg-0972826f"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:10:d1:ee:8e:5e",
+                            "NetworkInterfaceId": "eni-02775dd72a3a07212",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-64-252.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.64.252",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-64-252.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.64.252"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-47c5d423",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus_prod_mes_bastion_sg",
+                            "GroupId": "sg-0972826f"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "Temp Deloitte mes Jumphost"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-09b485cd5e34e83ee"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0b2cef0c7845e6f68",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-08-30T01:07:06+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-153.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.153",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-52-63-189-164.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "52.63.189.164",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2016-09-21 22:59:01 GMT)",
+                    "SubnetId": "subnet-e50c1b92",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-08-29T18:46:47+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-a4441a29"
+                            }
+                        }
+                    ],
+                    "ClientToken": "pWvun1472496406606",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-52-63-189-164.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "52.63.189.164"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2016-08-29T18:46:47+00:00",
+                                "AttachmentId": "eni-attach-a4ebc200",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-nginx-prod-sg",
+                                    "GroupId": "sg-04680760"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:2c:50:bb:e2:bd",
+                            "NetworkInterfaceId": "eni-187fa353",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-153.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.153",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-52-63-189-164.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "52.63.189.164"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-153.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.153"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-e50c1b92",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-nginx-prod-sg",
+                            "GroupId": "sg-04680760"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-nginx-prod-az2"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0e2d5d6388ef72ec0"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-39f8215b",
+                    "InstanceId": "i-0a889d90ec26a557f",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "goldeneye-prod",
+                    "LaunchTime": "2018-10-11T22:42:42+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-238-64-175.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.64.175",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-13-54-13-6.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "13.54.13.6",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-47c5d423",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2018-10-11T22:42:43+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0e27b099a79d1c411"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/SSMInstanceProfile",
+                        "Id": "AIPATKS45Z7QMLINHKYLM"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-13-54-13-6.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "13.54.13.6"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2018-10-11T22:42:42+00:00",
+                                "AttachmentId": "eni-attach-0f873b13d997b44ed",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-sa-cache-kibana-proxy-az1-security-group",
+                                    "GroupId": "sg-040716672e6afdffc"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:d3:b8:34:72:cc",
+                            "NetworkInterfaceId": "eni-03600fe3116290958",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-64-175.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.64.175",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-13-54-13-6.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "13.54.13.6"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-64-175.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.64.175"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-47c5d423",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-sa-cache-kibana-proxy-az1-security-group",
+                            "GroupId": "sg-040716672e6afdffc"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "CTO-Architecture"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "sa-cache-proxy"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Capability",
+                            "Value": "BROADBAND-AVAILABILITY"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "71435 - Goldeneye"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0cb7be0694067f7e2"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-fedafc9d",
+                    "InstanceId": "i-0e6c4f1226c465365",
+                    "InstanceType": "t2.small",
+                    "KeyName": "chorus_mes_prod_key",
+                    "LaunchTime": "2018-06-12T11:17:28+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-238-64-213.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.64.213",
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "aw0evgkw8e5c1q413zgy5pjce",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "PublicDnsName": "ec2-52-65-88-185.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "52.65.88.185",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-47c5d423",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2018-06-12T11:17:04+00:00",
+                                "DeleteOnTermination": false,
+                                "Status": "attached",
+                                "VolumeId": "vol-035133b6841282923"
+                            }
+                        }
+                    ],
+                    "ClientToken": "twQod1503985396842",
+                    "EbsOptimized": false,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/chorus-prod-mes-role",
+                        "Id": "AIPAIVRQQZJSVK2XERSDQ"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-52-65-88-185.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "52.65.88.185"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2017-08-29T05:43:17+00:00",
+                                "AttachmentId": "eni-attach-e79da40e",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus_prod_mes_nginx_sg",
+                                    "GroupId": "sg-55f70c33"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:42:cf:c3:35:5b",
+                            "NetworkInterfaceId": "eni-f0a4128d",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-64-213.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.64.213",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-52-65-88-185.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "52.65.88.185"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-64-213.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.64.213"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-47c5d423",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus_prod_mes_nginx_sg",
+                            "GroupId": "sg-55f70c33"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-nginx-mes-prod"
+                        },
+                        {
+                            "Key": "Capability",
+                            "Value": "INVENTORY"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "NFM-Network Field Management"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "71541 - Chorus Pole Tag and Test"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-08d04a878f799bb84"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-30041c53",
+                    "InstanceId": "i-055fbbd1144118f6f",
+                    "InstanceType": "t2.small",
+                    "KeyName": "chorus-runscope-agent",
+                    "LaunchTime": "2017-09-12T02:18:20+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-238-64-162.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.64.162",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-13-55-149-7.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "13.55.149.7",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-47c5d423",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2017-09-06T01:43:36+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0aff2eb67a523ec8f"
+                            }
+                        }
+                    ],
+                    "ClientToken": "zawnG1504662214946",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/SSMInstanceProfile",
+                        "Id": "AIPATKS45Z7QMLINHKYLM"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-13-55-149-7.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "13.55.149.7"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2017-09-06T01:43:35+00:00",
+                                "AttachmentId": "eni-attach-dde0f534",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-runscope-agent",
+                                    "GroupId": "sg-c58945a3"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:b6:4a:5e:58:3f",
+                            "NetworkInterfaceId": "eni-465bd23b",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-64-162.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.64.162",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-13-55-149-7.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "13.55.149.7"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-64-162.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.64.162"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-47c5d423",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-runscope-agent",
+                            "GroupId": "sg-c58945a3"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Project Name",
+                            "Value": "71388 - API Digital Gateway"
+                        },
+                        {
+                            "Key": "Capability",
+                            "Value": "MONITORING"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-runscope-agent"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "CTO-Operations"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-095ce01caa97f255b"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-02fa4a46524bb8c95",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-test-key2",
+                    "LaunchTime": "2016-07-11T07:04:16+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-164.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.164",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2018-02-08 23:49:53 GMT)",
+                    "SubnetId": "subnet-4a39d32e",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-11T07:04:16+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-a1bc692e"
+                            }
+                        }
+                    ],
+                    "ClientToken": "WQAEE1468220655766",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-11T07:04:16+00:00",
+                                "AttachmentId": "eni-attach-c255d401",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "elk-test-sg",
+                                    "GroupId": "sg-a7e228c0"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:f1:7c:e3:ce:09",
+                            "NetworkInterfaceId": "eni-7c5da705",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-164.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.164",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-164.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.164"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4a39d32e",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "elk-test-sg",
+                            "GroupId": "sg-a7e228c0"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeDeleted"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "DEV"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-test"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-010b15982067a3798"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0b7d0ec9805edaf81",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2018-11-06T20:14:22+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-205.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.205",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2018-11-06 20:29:08 GMT)",
+                    "SubnetId": "subnet-3eeb145a",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-22T21:41:38+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-927ca61d"
+                            }
+                        }
+                    ],
+                    "ClientToken": "RLwTt1469223696478",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-22T21:41:38+00:00",
+                                "AttachmentId": "eni-attach-69ef73aa",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-elasticsearch-prod-sg",
+                                    "GroupId": "sg-aedeb2ca"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:2d:fe:98:c5:1d",
+                            "NetworkInterfaceId": "eni-abae76d2",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-205.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.205",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-205.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.205"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-3eeb145a",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-elasticsearch-prod-sg",
+                            "GroupId": "sg-aedeb2ca"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-prod01-az1"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0fa4786d83c3edcc4"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0b106ffc4b735267b",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-08-29T19:00:48+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-254.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.254",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2016-09-19 17:52:26 GMT)",
+                    "SubnetId": "subnet-b5a758c3",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-08-29T19:00:49+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-2c451ba1"
+                            }
+                        }
+                    ],
+                    "ClientToken": "CQEWr1472497247922",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-08-29T19:00:48+00:00",
+                                "AttachmentId": "eni-attach-efefc64b",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-elasticsearch-prod-sg",
+                                    "GroupId": "sg-aedeb2ca"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:61:86:af:f7:45",
+                            "NetworkInterfaceId": "eni-6c75a927",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-254.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.254",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-254.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.254"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-b5a758c3",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-elasticsearch-prod-sg",
+                            "GroupId": "sg-aedeb2ca"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-prod02-az2"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0ebfae84b05ad0903"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-1cd6f87f",
+                    "InstanceId": "i-0309b7d09cfc9905f",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-07-21T20:57:57+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-137.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.137",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2019-03-27 01:06:43 GMT)",
+                    "SubnetId": "subnet-4b39d32f",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-21T20:57:58+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-6ee43fe1"
+                            }
+                        }
+                    ],
+                    "ClientToken": "JXtKs1469134677204",
+                    "EbsOptimized": false,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-21T20:57:57+00:00",
+                                "AttachmentId": "eni-attach-268b19e5",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "NATSG_Prod",
+                                    "GroupId": "sg-bcc1add8"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:a7:7e:01:25:2d",
+                            "NetworkInterfaceId": "eni-e236e99b",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-137.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.137",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-137.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.137"
+                                }
+                            ],
+                            "SourceDestCheck": false,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4b39d32f",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "NATSG_Prod",
+                            "GroupId": "sg-bcc1add8"
+                        }
+                    ],
+                    "SourceDestCheck": false,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeDeleted"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-nat-instance-prod-az1"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Capability",
+                            "Value": ""
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0d463dcbc087be7f5"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-06140de9114afa659",
+                    "InstanceType": "t2.nano",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2018-11-06T20:14:10+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-142.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.142",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2018-11-06 20:29:18 GMT)",
+                    "SubnetId": "subnet-4b39d32f",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-21T21:23:02+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-4f13c8c0"
+                            }
+                        }
+                    ],
+                    "ClientToken": "YNPHa1469136181330",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-21T21:23:01+00:00",
+                                "AttachmentId": "eni-attach-a4b42667",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "bastion-prod-sg",
+                                    "GroupId": "sg-b9dfb3dd"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:eb:b4:11:c3:67",
+                            "NetworkInterfaceId": "eni-e124fb98",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-142.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.142",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-142.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.142"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4b39d32f",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "bastion-prod-sg",
+                            "GroupId": "sg-b9dfb3dd"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-bastion-prod-az1"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0141bcc3ecad4d8c2"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0f307b7625bd712cd",
+                    "InstanceId": "i-0209ad72dfeac793d",
+                    "InstanceType": "t2.small",
+                    "KeyName": "prod-ec2-bastion-host-key",
+                    "LaunchTime": "2019-11-20T01:10:09+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "Platform": "windows",
+                    "PrivateDnsName": "ip-10-238-64-208.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.64.208",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-3-104-76-254.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "3.104.76.254",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-47c5d423",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2019-11-10T09:19:26+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0b1a3b5dca0aa45e5"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/SSMInstanceProfile",
+                        "Id": "AIPATKS45Z7QMLINHKYLM"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "ec2-3-104-76-254.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "3.104.76.254"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2019-11-10T09:19:25+00:00",
+                                "AttachmentId": "eni-attach-0ce94493b66b25ba9",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "prod-ec2-security-group",
+                                    "GroupId": "sg-05916b61a511e00c0"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:55:f6:bd:ad:d4",
+                            "NetworkInterfaceId": "eni-0e748bb1792d73c17",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-64-208.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.64.208",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicDnsName": "ec2-3-104-76-254.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "3.104.76.254"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-64-208.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.64.208"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-47c5d423",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "prod-ec2-security-group",
+                            "GroupId": "sg-05916b61a511e00c0"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "Aurora DB Bastion Host"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0b54061c157101e63"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-05630cc69b2107652",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-08-29T18:54:25+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-234.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.234",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2016-09-19 17:52:26 GMT)",
+                    "SubnetId": "subnet-b5a758c3",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-08-29T18:54:26+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-9f451b12"
+                            }
+                        }
+                    ],
+                    "ClientToken": "zjKwl1472496865106",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-08-29T18:54:25+00:00",
+                                "AttachmentId": "eni-attach-99eac33d",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-elasticsearch-prod-sg",
+                                    "GroupId": "sg-aedeb2ca"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:3c:68:9c:46:bb",
+                            "NetworkInterfaceId": "eni-cc7ba787",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-234.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.234",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-234.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.234"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-b5a758c3",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-elasticsearch-prod-sg",
+                            "GroupId": "sg-aedeb2ca"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-prod01-az2"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-02504ba9ec2979c38"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-1cd6f87f",
+                    "InstanceId": "i-093363f53688cc451",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-08-29T18:30:40+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-155.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.155",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2019-03-27 01:06:18 GMT)",
+                    "SubnetId": "subnet-e50c1b92",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-08-29T18:30:41+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-2c4618a1"
+                            }
+                        }
+                    ],
+                    "ClientToken": "cvvsi1472495440093",
+                    "EbsOptimized": false,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-08-29T18:30:40+00:00",
+                                "AttachmentId": "eni-attach-03173ea7",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "NATSG_Prod_AZ2",
+                                    "GroupId": "sg-e99fca8d"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:7c:98:01:24:83",
+                            "NetworkInterfaceId": "eni-de479b95",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-155.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.155",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-155.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.155"
+                                }
+                            ],
+                            "SourceDestCheck": false,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-e50c1b92",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "NATSG_Prod_AZ2",
+                            "GroupId": "sg-e99fca8d"
+                        }
+                    ],
+                    "SourceDestCheck": false,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeDeleted"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-nat-instance-prod-az2"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0089121fe459abbf7"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-074b7470cdf156251",
+                    "InstanceId": "i-0b7ba893a5b79cc4f",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "chorus_mes_prod_key2",
+                    "LaunchTime": "2019-12-12T02:52:38+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "Platform": "windows",
+                    "PrivateDnsName": "ip-10-238-67-40.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.67.40",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-3-24-110-192.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "3.24.110.192",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-94c0d1f0",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2019-08-14T01:54:22+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0242fca71e9569f4d"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "ec2-3-24-110-192.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "3.24.110.192"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2019-08-14T01:54:21+00:00",
+                                "AttachmentId": "eni-attach-0b04b8116fc0016c9",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus_prod_mes_application_sg",
+                                    "GroupId": "sg-9d6292fb"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:fb:7f:3e:ae:e2",
+                            "NetworkInterfaceId": "eni-07c0e1760f14675bd",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-67-40.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.67.40",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicDnsName": "ec2-3-24-110-192.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "3.24.110.192"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-67-40.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.67.40"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-94c0d1f0",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus_prod_mes_application_sg",
+                            "GroupId": "sg-9d6292fb"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "Temp Deloitte mes Win host"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0c18e62626e72dd52"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-307fa852",
+                    "InstanceId": "i-0b23cacef79629be4",
+                    "InstanceType": "m4.xlarge",
+                    "KeyName": "chorus_mes_app_prod_key",
+                    "LaunchTime": "2018-06-14T03:34:45+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "Platform": "windows",
+                    "PrivateDnsName": "ip-10-238-66-52.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.66.52",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-3-104-186-173.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "3.104.186.173",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-94c0d1f0",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2018-06-13T01:35:16+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0009302a4cc2ffb35"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/SSMInstanceProfile",
+                        "Id": "AIPATKS45Z7QMLINHKYLM"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-3-104-186-173.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "3.104.186.173"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2018-06-13T01:35:15+00:00",
+                                "AttachmentId": "eni-attach-3a9809d6",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus_prod_mes_application_sg",
+                                    "GroupId": "sg-9d6292fb"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:e8:a9:62:f1:aa",
+                            "NetworkInterfaceId": "eni-d2b031ff",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-66-52.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.66.52",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-3-104-186-173.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "3.104.186.173"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-66-52.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.66.52"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-94c0d1f0",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus_prod_mes_application_sg",
+                            "GroupId": "sg-9d6292fb"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Capability",
+                            "Value": "INVENTORY"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "NFM-Network Field Management"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-mes-application-prod-2_GreenMe"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "71541 - Chorus Pole Tag and Test"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-023e7798f604daa97"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0ccb584abc5897ffa",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-08-29T19:06:37+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-253.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.253",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2016-09-19 17:52:26 GMT)",
+                    "SubnetId": "subnet-b5a758c3",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-08-29T19:06:37+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-82431d0f"
+                            }
+                        }
+                    ],
+                    "ClientToken": "pyZhs1472497596535",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-08-29T19:06:37+00:00",
+                                "AttachmentId": "eni-attach-2ae1c88e",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-elasticsearch-prod-sg",
+                                    "GroupId": "sg-aedeb2ca"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:b2:c9:26:62:55",
+                            "NetworkInterfaceId": "eni-d874a893",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-253.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.253",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-253.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.253"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-b5a758c3",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-elasticsearch-prod-sg",
+                            "GroupId": "sg-aedeb2ca"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-prod03-az2"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0b74221bf07b4a494"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-082869751728d0a8c",
+                    "InstanceId": "i-0c87878a8b0575b1a",
+                    "InstanceType": "m4.xlarge",
+                    "KeyName": "chorus_mes_prod_key2",
+                    "LaunchTime": "2019-08-14T03:18:33+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "Platform": "windows",
+                    "PrivateDnsName": "ip-10-238-66-183.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.66.183",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-13-237-13-213.ap-southeast-2.compute.amazonaws.com",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-94c0d1f0",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2019-08-14T03:17:19+00:00",
+                                "DeleteOnTermination": false,
+                                "Status": "attached",
+                                "VolumeId": "vol-083f246bd3e7342e8"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/chorus-prod-mes-role",
+                        "Id": "AIPAIVRQQZJSVK2XERSDQ"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2019-08-14T01:13:54+00:00",
+                                "AttachmentId": "eni-attach-042c1ceeaad5648fa",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus_prod_mes_application_sg",
+                                    "GroupId": "sg-9d6292fb"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:09:45:aa:fa:46",
+                            "NetworkInterfaceId": "eni-02bb0d40e686e5709",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-66-183.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.66.183",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-66-183.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.66.183"
+                                },
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-13-237-13-213.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "13.237.13.213"
+                                    },
+                                    "Primary": false,
+                                    "PrivateDnsName": "ip-10-238-67-90.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.67.90"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-94c0d1f0",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus_prod_mes_application_sg",
+                            "GroupId": "sg-9d6292fb"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-mes-application-prod_BlueME"
+                        },
+                        {
+                            "Key": "Capability",
+                            "Value": "INVENTORY"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "NFM-Network Field Management"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "71541 - Chorus Pole Tag and Test"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-02da97cb33acb461c"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0ee1af2bcc3f28463",
+                    "InstanceType": "t2.medium",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-07-22T21:44:51+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-213.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.213",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2018-01-23 20:09:08 GMT)",
+                    "SubnetId": "subnet-3eeb145a",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-22T21:44:51+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-417ca6ce"
+                            }
+                        }
+                    ],
+                    "ClientToken": "VKgcW1469223890939",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-22T21:44:51+00:00",
+                                "AttachmentId": "eni-attach-05e874c6",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-elasticsearch-prod-sg",
+                                    "GroupId": "sg-aedeb2ca"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:24:70:ff:1b:c5",
+                            "NetworkInterfaceId": "eni-b9ad75c0",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-213.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.213",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-213.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.213"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-3eeb145a",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-elasticsearch-prod-sg",
+                            "GroupId": "sg-aedeb2ca"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-elk-prod02-az1"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 2,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0c8b71837984264a8"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-05e8164b30645c9f1",
+                    "InstanceType": "t2.nano",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2016-08-29T20:08:15+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-168.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.168",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2016-09-19 17:52:26 GMT)",
+                    "SubnetId": "subnet-4a39d32e",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-08-29T20:08:16+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-83e47d0c"
+                            }
+                        }
+                    ],
+                    "ClientToken": "akWIV1472501295377",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-08-29T20:08:15+00:00",
+                                "AttachmentId": "eni-attach-5b5ac3fe",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "bastion-prod-sg",
+                                    "GroupId": "sg-b9dfb3dd"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:ab:6a:8c:b2:7f",
+                            "NetworkInterfaceId": "eni-8be3a0f2",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-168.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.168",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-168.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.168"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4a39d32e",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "bastion-prod-sg",
+                            "GroupId": "sg-b9dfb3dd"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-bastion-prod-az2"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-01fb9b42a8406131d"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-10b1a873",
+                    "InstanceId": "i-0bc94c64cd8d397e8",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "chorus_mes_prod_key",
+                    "LaunchTime": "2017-08-22T23:39:39+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "Platform": "windows",
+                    "PrivateDnsName": "ip-10-238-64-134.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.238.64.134",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-54-153-224-21.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "54.153.224.21",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-47c5d423",
+                    "VpcId": "vpc-5bbdf23f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2017-08-22T23:39:40+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-084946ae44b803ce7"
+                            }
+                        }
+                    ],
+                    "ClientToken": "eBHOa1503445177814",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/chorus-prod-mes-role",
+                        "Id": "AIPAIVRQQZJSVK2XERSDQ"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-54-153-224-21.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "54.153.224.21"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2017-08-22T23:39:39+00:00",
+                                "AttachmentId": "eni-attach-2a072fc3",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus_prod_mes_bastion_sg",
+                                    "GroupId": "sg-0972826f"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:e6:5a:04:78:c3",
+                            "NetworkInterfaceId": "eni-0de13b70",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-238-64-134.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.238.64.134",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-54-153-224-21.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "54.153.224.21"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-238-64-134.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.238.64.134"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-47c5d423",
+                            "VpcId": "vpc-5bbdf23f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus_prod_mes_bastion_sg",
+                            "GroupId": "sg-0972826f"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Capability",
+                            "Value": "INVENTORY"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-bastion-mes-prod"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "NFM-Network Field Management"
+                        },
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "71541 - Chorus Pole Tag and Test"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-05134ba7bdbad6539"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-dc361ebf",
+                    "InstanceId": "i-0af41ae6829d39e72",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "chorus-elasticsearch-prod-key",
+                    "LaunchTime": "2018-09-04T23:57:20+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-141.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.141",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2018-09-06 01:22:14 GMT)",
+                    "SubnetId": "subnet-4b39d32f",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2016-07-22T07:25:08+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-ccb56f43"
+                            }
+                        }
+                    ],
+                    "ClientToken": "kLMhH1469172306925",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2016-07-22T07:25:07+00:00",
+                                "AttachmentId": "eni-attach-46e97485",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "chorus-nginx-prod-sg",
+                                    "GroupId": "sg-04680760"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:44:cc:f7:04:b3",
+                            "NetworkInterfaceId": "eni-0f4e9076",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-141.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.141",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-141.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.141"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-4b39d32f",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "chorus-nginx-prod-sg",
+                            "GroupId": "sg-04680760"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "PROD"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-nginx-prod-az1"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeTerminated"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-0e5b697783844fbc7"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-623c0d01",
+                    "InstanceId": "i-0e0c5499c3e0dff1a",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "ERP Project",
+                    "LaunchTime": "2019-03-15T01:43:09+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "ap-southeast-2b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-233-3-182.ap-southeast-2.compute.internal",
+                    "PrivateIpAddress": "10.233.3.182",
+                    "ProductCodes": [],
+                    "PublicDnsName": "ec2-52-63-218-153.ap-southeast-2.compute.amazonaws.com",
+                    "PublicIpAddress": "52.63.218.153",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "StateTransitionReason": "",
+                    "SubnetId": "subnet-e40c1b93",
+                    "VpcId": "vpc-3ab2865f",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2016-09-26T08:05:16+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-6a1930e7"
+                            }
+                        }
+                    ],
+                    "ClientToken": "mzFwX1474877115406",
+                    "EbsOptimized": false,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::228901900256:instance-profile/SSMInstanceProfile",
+                        "Id": "AIPATKS45Z7QMLINHKYLM"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "228901900256",
+                                "PublicDnsName": "ec2-52-63-218-153.ap-southeast-2.compute.amazonaws.com",
+                                "PublicIp": "52.63.218.153"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2016-09-26T08:05:16+00:00",
+                                "AttachmentId": "eni-attach-26d9c182",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "Linux SSH Test server",
+                                    "GroupId": "sg-fe06249a"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:f4:a2:50:07:f3",
+                            "NetworkInterfaceId": "eni-a28719e9",
+                            "OwnerId": "228901900256",
+                            "PrivateDnsName": "ip-10-233-3-182.ap-southeast-2.compute.internal",
+                            "PrivateIpAddress": "10.233.3.182",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "228901900256",
+                                        "PublicDnsName": "ec2-52-63-218-153.ap-southeast-2.compute.amazonaws.com",
+                                        "PublicIp": "52.63.218.153"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-233-3-182.ap-southeast-2.compute.internal",
+                                    "PrivateIpAddress": "10.233.3.182"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-e40c1b93",
+                            "VpcId": "vpc-3ab2865f",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "Linux SSH Test server",
+                            "GroupId": "sg-fe06249a"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Cost Center/ Business Unit",
+                            "Value": "1570"
+                        },
+                        {
+                            "Key": "Project Name",
+                            "Value": "ToBeDeleted"
+                        },
+                        {
+                            "Key": "CreatedBy",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "chorus-erp-test"
+                        },
+                        {
+                            "Key": "Customer",
+                            "Value": "Chorus"
+                        },
+                        {
+                            "Key": "Environment",
+                            "Value": "DEV"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    }
+                }
+            ],
+            "OwnerId": "228901900256",
+            "ReservationId": "r-02f890da06b72433d"
+        }
+    ]
+}

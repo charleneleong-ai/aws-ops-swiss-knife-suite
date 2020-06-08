@@ -1,0 +1,69 @@
+{
+    "InstanceInformationList": [
+        {
+            "InstanceId": "i-0a889d90ec26a557f",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T17:21:09.205000+12:00",
+            "AgentVersion": "2.3.117.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Linux",
+            "PlatformName": "Amazon Linux",
+            "PlatformVersion": "2",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.64.175",
+            "ComputerName": "ip-10-238-64-175.ap-southeast-2.compute.internal"
+        },
+        {
+            "InstanceId": "i-0bc94c64cd8d397e8",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T17:18:19.370000+12:00",
+            "AgentVersion": "2.3.760.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "PlatformName": "Microsoft Windows Server 2016 Datacenter",
+            "PlatformVersion": "10.0.14393",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.64.134",
+            "ComputerName": "EC2AMAZ-75JHSVS.WORKGROUP"
+        },
+        {
+            "InstanceId": "i-0c87878a8b0575b1a",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T17:21:41.509000+12:00",
+            "AgentVersion": "2.3.760.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "PlatformName": "Microsoft Windows Server 2016 Datacenter",
+            "PlatformVersion": "10.0.14393",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.66.183",
+            "ComputerName": "EC2AMAZ-7R98OU5.WORKGROUP"
+        },
+        {
+            "InstanceId": "i-0b23cacef79629be4",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T17:21:12.469000+12:00",
+            "AgentVersion": "2.3.760.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "PlatformName": "Microsoft Windows Server 2016 Datacenter",
+            "PlatformVersion": "10.0.14393",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.66.52",
+            "ComputerName": "EC2AMAZ-OJEO3BD.WORKGROUP"
+        },
+        {
+            "InstanceId": "i-0209ad72dfeac793d",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2020-06-08T17:21:46.372000+12:00",
+            "AgentVersion": "2.3.634.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "PlatformName": "Microsoft Windows Server 2019 Datacenter",
+            "PlatformVersion": "10.0.17763",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.238.64.208",
+            "ComputerName": "EC2AMAZ-4A7HE9C.WORKGROUP"
+        }
+    ]
+}

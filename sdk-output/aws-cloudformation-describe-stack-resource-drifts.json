@@ -1,0 +1,122 @@
+{
+    "StackResourceDrifts": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:748611154099:stack/chris21-apps-test/35c12200-cb72-11e8-aa0b-027753bcaabc",
+            "LogicalResourceId": "AppSG",
+            "PhysicalResourceId": "sg-0c180ce865c3281ef",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "ExpectedProperties": "{\"GroupDescription\":\"Main Security Group for chris21\",\"SecurityGroupEgress\":[{\"CidrIp\":\"10.228.2.143/32\",\"Description\":\"Active directory access\",\"IpProtocol\":-1},{\"CidrIp\":\"192.168.0.0/16\",\"Description\":\"SFTP to Revera\",\"FromPort\":22,\"IpProtocol\":\"tcp\",\"ToPort\":22},{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"HTTPS to the world\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"CidrIp\":\"10.252.31.85/32\",\"Description\":\"SMTP Access\",\"FromPort\":25,\"IpProtocol\":\"tcp\",\"ToPort\":25},{\"CidrIp\":\"10.251.31.85/32\",\"Description\":\"SMTP Access\",\"FromPort\":25,\"IpProtocol\":\"tcp\",\"ToPort\":25},{\"CidrIp\":\"10.240.192.0/18\",\"Description\":\"Proxy Access\",\"FromPort\":8080,\"IpProtocol\":\"tcp\",\"ToPort\":8080},{\"CidrIp\":\"10.228.3.42/32\",\"Description\":\"Active directory access\",\"IpProtocol\":-1},{\"Description\":\"instances within same SG\",\"IpProtocol\":-1},{\"CidrIp\":\"192.168.128.0/18\",\"Description\":\"Active directory access\",\"IpProtocol\":-1},{\"CidrIp\":\"10.253.2.10/32\",\"Description\":\"Snow Agent Outbound\",\"FromPort\":8443,\"IpProtocol\":\"tcp\",\"ToPort\":8443}],\"SecurityGroupIngress\":[{\"Description\":\"HTTP from Load-Balancer\",\"FromPort\":80,\"IpProtocol\":\"tcp\",\"SourceSecurityGroupId\":\"sg-0b2cbcdd6980300cb\",\"SourceSecurityGroupOwnerId\":748611154099,\"ToPort\":80},{\"CidrIp\":\"192.168.0.0/16\",\"Description\":\"7201 from brandon street\",\"FromPort\":7021,\"IpProtocol\":\"tcp\",\"ToPort\":7021},{\"Description\":\"instances within same SG\",\"IpProtocol\":-1,\"SourceSecurityGroupId\":\"sg-0c180ce865c3281ef\",\"SourceSecurityGroupOwnerId\":748611154099},{\"CidrIp\":\"10.253.0.0/19\",\"Description\":\"RDP from VDI\",\"FromPort\":3389,\"IpProtocol\":\"tcp\",\"ToPort\":3389},{\"CidrIp\":\"10.228.0.0/16\",\"Description\":\"RDP from ops account\",\"FromPort\":3389,\"IpProtocol\":\"tcp\",\"ToPort\":3389},{\"CidrIp\":\"10.100.0.0/20\",\"Description\":\"7201 from VPN\",\"FromPort\":7021,\"IpProtocol\":\"tcp\",\"ToPort\":7021},{\"CidrIp\":\"10.99.90.0/23\",\"Description\":\"7201 from VPN\",\"FromPort\":7021,\"IpProtocol\":\"tcp\",\"ToPort\":7021},{\"Description\":\"HTTPS from Load-Balancer\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"SourceSecurityGroupId\":\"sg-0b2cbcdd6980300cb\",\"SourceSecurityGroupOwnerId\":748611154099,\"ToPort\":443}],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}],\"VpcId\":\"vpc-0f9a93b6c73a8d039\"}",
+            "ActualProperties": "{\"GroupDescription\":\"Main Security Group for chris21\",\"SecurityGroupEgress\":[{\"CidrIp\":\"10.228.2.143/32\",\"Description\":\"Active directory access\",\"IpProtocol\":-1},{\"CidrIp\":\"192.168.0.0/16\",\"Description\":\"SFTP to Revera\",\"FromPort\":22,\"IpProtocol\":\"tcp\",\"ToPort\":22},{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"HTTPS to the world\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"CidrIp\":\"10.252.31.85/32\",\"Description\":\"SMTP Access\",\"FromPort\":25,\"IpProtocol\":\"tcp\",\"ToPort\":25},{\"CidrIp\":\"10.251.31.85/32\",\"Description\":\"SMTP Access\",\"FromPort\":25,\"IpProtocol\":\"tcp\",\"ToPort\":25},{\"CidrIp\":\"10.240.192.0/18\",\"Description\":\"Proxy Access\",\"FromPort\":8080,\"IpProtocol\":\"tcp\",\"ToPort\":8080},{\"CidrIp\":\"10.228.3.42/32\",\"Description\":\"Active directory access\",\"IpProtocol\":-1},{\"Description\":\"instances within same SG\",\"IpProtocol\":-1},{\"CidrIp\":\"192.168.128.0/18\",\"Description\":\"Active directory access\",\"IpProtocol\":-1},{\"CidrIp\":\"10.253.2.10/32\",\"Description\":\"Snow Agent Outbound\",\"FromPort\":8443,\"IpProtocol\":\"tcp\",\"ToPort\":8443}],\"SecurityGroupIngress\":[{\"Description\":\"HTTP from Load-Balancer\",\"FromPort\":80,\"IpProtocol\":\"tcp\",\"SourceSecurityGroupId\":\"sg-0b2cbcdd6980300cb\",\"SourceSecurityGroupOwnerId\":748611154099,\"ToPort\":80},{\"CidrIp\":\"192.168.0.0/16\",\"Description\":\"7201 from brandon street\",\"FromPort\":7021,\"IpProtocol\":\"tcp\",\"ToPort\":7021},{\"Description\":\"instances within same SG\",\"IpProtocol\":-1,\"SourceSecurityGroupId\":\"sg-0c180ce865c3281ef\",\"SourceSecurityGroupOwnerId\":748611154099},{\"CidrIp\":\"10.253.0.0/19\",\"Description\":\"RDP from VDI\",\"FromPort\":3389,\"IpProtocol\":\"tcp\",\"ToPort\":3389},{\"CidrIp\":\"10.228.0.0/16\",\"Description\":\"RDP from ops account\",\"FromPort\":3389,\"IpProtocol\":\"tcp\",\"ToPort\":3389},{\"CidrIp\":\"10.100.0.0/20\",\"Description\":\"7201 from VPN\",\"FromPort\":7021,\"IpProtocol\":\"tcp\",\"ToPort\":7021},{\"CidrIp\":\"10.99.90.0/23\",\"Description\":\"7201 from VPN\",\"FromPort\":7021,\"IpProtocol\":\"tcp\",\"ToPort\":7021},{\"Description\":\"HTTPS from Load-Balancer\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"SourceSecurityGroupId\":\"sg-0b2cbcdd6980300cb\",\"SourceSecurityGroupOwnerId\":748611154099,\"ToPort\":443},{\"CidrIp\":\"10.240.101.141/32\",\"FromPort\":3389,\"IpProtocol\":\"tcp\",\"ToPort\":3389},{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"Testing\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"Description\":\"Testing\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443}],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}],\"VpcId\":\"vpc-0f9a93b6c73a8d039\"}",
+            "PropertyDifferences": [
+                {
+                    "PropertyPath": "/SecurityGroupIngress/8",
+                    "ExpectedValue": "null",
+                    "ActualValue": "{\"CidrIp\":\"10.240.101.141/32\",\"FromPort\":3389,\"IpProtocol\":\"tcp\",\"ToPort\":3389}",
+                    "DifferenceType": "ADD"
+                },
+                {
+                    "PropertyPath": "/SecurityGroupIngress/9",
+                    "ExpectedValue": "null",
+                    "ActualValue": "{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"Testing\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443}",
+                    "DifferenceType": "ADD"
+                },
+                {
+                    "PropertyPath": "/SecurityGroupIngress/10",
+                    "ExpectedValue": "null",
+                    "ActualValue": "{\"Description\":\"Testing\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443}",
+                    "DifferenceType": "ADD"
+                }
+            ],
+            "StackResourceDriftStatus": "MODIFIED",
+            "Timestamp": "2020-05-03T22:47:13.848000+00:00"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:748611154099:stack/chris21-apps-test/35c12200-cb72-11e8-aa0b-027753bcaabc",
+            "LogicalResourceId": "LoadBalancer",
+            "PhysicalResourceId": "arn:aws:elasticloadbalancing:ap-southeast-2:748611154099:loadbalancer/app/chris21-app-lb-private/172c79fc7101f464",
+            "ResourceType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+            "ExpectedProperties": "{\"LoadBalancerAttributes\":[{\"Key\":\"idle_timeout.timeout_seconds\",\"Value\":120}],\"Name\":\"chris21-app-lb-private\",\"Scheme\":\"internal\",\"SecurityGroups\":[\"sg-0b2cbcdd6980300cb\"],\"Subnets\":[\"subnet-009ce1501302db8c2\",\"subnet-09b8415666c82a3d7\",\"subnet-0d2ca759e1f8354c1\"],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}]}",
+            "ActualProperties": "{\"LoadBalancerAttributes\":[{\"Key\":\"idle_timeout.timeout_seconds\",\"Value\":120}],\"Name\":\"chris21-app-lb-private\",\"Scheme\":\"internal\",\"SecurityGroups\":[\"sg-0b2cbcdd6980300cb\"],\"Subnets\":[\"subnet-009ce1501302db8c2\",\"subnet-09b8415666c82a3d7\",\"subnet-0d2ca759e1f8354c1\"],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}]}",
+            "PropertyDifferences": [],
+            "StackResourceDriftStatus": "IN_SYNC",
+            "Timestamp": "2020-05-04T02:25:10.312000+00:00"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:748611154099:stack/chris21-apps-test/35c12200-cb72-11e8-aa0b-027753bcaabc",
+            "LogicalResourceId": "LoadBalancerSG",
+            "PhysicalResourceId": "sg-0b2cbcdd6980300cb",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "ExpectedProperties": "{\"GroupDescription\":\"Load-Balancer Security Group for chris21\",\"SecurityGroupEgress\":[{\"Description\":\"HTTPS access to Main\",\"DestinationSecurityGroupId\":\"sg-0c180ce865c3281ef\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"Description\":\"HTTPS access to Main\",\"DestinationSecurityGroupId\":\"sg-0c180ce865c3281ef\",\"FromPort\":80,\"IpProtocol\":\"tcp\",\"ToPort\":80}],\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"HTTPS from anywhere\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"HTTP from anywhere\",\"FromPort\":80,\"IpProtocol\":\"tcp\",\"ToPort\":80}],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Name\",\"Value\":\"chris21-loadbalancer-sg\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}],\"VpcId\":\"vpc-0f9a93b6c73a8d039\"}",
+            "ActualProperties": "{\"GroupDescription\":\"Load-Balancer Security Group for chris21\",\"SecurityGroupEgress\":[{\"Description\":\"HTTPS access to Main\",\"DestinationSecurityGroupId\":\"sg-0c180ce865c3281ef\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"Description\":\"HTTPS access to Main\",\"DestinationSecurityGroupId\":\"sg-0c180ce865c3281ef\",\"FromPort\":80,\"IpProtocol\":\"tcp\",\"ToPort\":80}],\"SecurityGroupIngress\":[{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"HTTPS from anywhere\",\"FromPort\":443,\"IpProtocol\":\"tcp\",\"ToPort\":443},{\"CidrIp\":\"0.0.0.0/0\",\"Description\":\"HTTP from anywhere\",\"FromPort\":80,\"IpProtocol\":\"tcp\",\"ToPort\":80}],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Name\",\"Value\":\"chris21-loadbalancer-sg\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}],\"VpcId\":\"vpc-0f9a93b6c73a8d039\"}",
+            "PropertyDifferences": [],
+            "StackResourceDriftStatus": "IN_SYNC",
+            "Timestamp": "2020-05-04T02:25:18.792000+00:00"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:748611154099:stack/chris21-apps-test/35c12200-cb72-11e8-aa0b-027753bcaabc",
+            "LogicalResourceId": "Role",
+            "PhysicalResourceId": "chris21-apps-test-Role-1VC8YUI32IMFV",
+            "ResourceType": "AWS::IAM::Role",
+            "ExpectedProperties": "{\"AssumeRolePolicyDocument\":{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ssm.amazonaws.com\",\"ec2.amazonaws.com\"]}}],\"Version\":\"2012-10-17\"},\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\"],\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}]}",
+            "ActualProperties": "{\"AssumeRolePolicyDocument\":{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ssm.amazonaws.com\",\"ec2.amazonaws.com\"]}}],\"Version\":\"2012-10-17\"},\"ManagedPolicyArns\":[\"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM\"]}",
+            "PropertyDifferences": [
+                {
+                    "PropertyPath": "/Tags",
+                    "ExpectedValue": "[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}]",
+                    "ActualValue": "null",
+                    "DifferenceType": "REMOVE"
+                }
+            ],
+            "StackResourceDriftStatus": "MODIFIED",
+            "Timestamp": "2020-05-04T02:25:02.893000+00:00"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:748611154099:stack/chris21-apps-test/35c12200-cb72-11e8-aa0b-027753bcaabc",
+            "LogicalResourceId": "Volume1Data",
+            "PhysicalResourceId": "vol-0adbfc6655ca81b61",
+            "ResourceType": "AWS::EC2::Volume",
+            "ExpectedProperties": "{\"AvailabilityZone\":\"ap-southeast-2b\",\"Encrypted\":true,\"KmsKeyId\":\"arn:aws:kms:ap-southeast-2:812275452992:key/709957da-f622-41c1-96e7-4e8addf137fe\",\"Size\":100,\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Name\",\"Value\":\"chris21-vol1\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}],\"VolumeType\":\"gp2\"}",
+            "ActualProperties": "{\"AvailabilityZone\":\"ap-southeast-2b\",\"Encrypted\":true,\"KmsKeyId\":\"arn:aws:kms:ap-southeast-2:812275452992:key/709957da-f622-41c1-96e7-4e8addf137fe\",\"Size\":100,\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Name\",\"Value\":\"chris21-vol1\"},{\"Key\":\"Service:Owner\",\"Value\":\"Stratus\"},{\"Key\":\"Business:Owner\",\"Value\":\"Stratus\"}],\"VolumeType\":\"gp2\"}",
+            "PropertyDifferences": [
+                {
+                    "PropertyPath": "/Tags/2/Value",
+                    "ExpectedValue": "CloudAndInfra",
+                    "ActualValue": "Stratus",
+                    "DifferenceType": "NOT_EQUAL"
+                },
+                {
+                    "PropertyPath": "/Tags/3/Value",
+                    "ExpectedValue": "CloudAndInfra",
+                    "ActualValue": "Stratus",
+                    "DifferenceType": "NOT_EQUAL"
+                }
+            ],
+            "StackResourceDriftStatus": "MODIFIED",
+            "Timestamp": "2020-05-03T22:47:20.271000+00:00"
+        },
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:748611154099:stack/chris21-apps-test/35c12200-cb72-11e8-aa0b-027753bcaabc",
+            "LogicalResourceId": "Volume2Data",
+            "PhysicalResourceId": "vol-04d1817cb24534856",
+            "ResourceType": "AWS::EC2::Volume",
+            "ExpectedProperties": "{\"AvailabilityZone\":\"ap-southeast-2b\",\"Encrypted\":true,\"KmsKeyId\":\"arn:aws:kms:ap-southeast-2:812275452992:key/709957da-f622-41c1-96e7-4e8addf137fe\",\"Size\":150,\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Name\",\"Value\":\"chris21-vol1\"},{\"Key\":\"Service:Owner\",\"Value\":\"CloudAndInfra\"},{\"Key\":\"Business:Owner\",\"Value\":\"CloudAndInfra\"}],\"VolumeType\":\"gp2\"}",
+            "ActualProperties": "{\"AvailabilityZone\":\"ap-southeast-2b\",\"Encrypted\":true,\"KmsKeyId\":\"arn:aws:kms:ap-southeast-2:812275452992:key/709957da-f622-41c1-96e7-4e8addf137fe\",\"Size\":150,\"Tags\":[{\"Key\":\"Technical:Environment\",\"Value\":\"Test\"},{\"Key\":\"Name\",\"Value\":\"chris21-vol1\"},{\"Key\":\"Service:Owner\",\"Value\":\"Stratus\"},{\"Key\":\"Business:Owner\",\"Value\":\"Stratus\"}],\"VolumeType\":\"gp2\"}",
+            "PropertyDifferences": [
+                {
+                    "PropertyPath": "/Tags/2/Value",
+                    "ExpectedValue": "CloudAndInfra",
+                    "ActualValue": "Stratus",
+                    "DifferenceType": "NOT_EQUAL"
+                },
+                {
+                    "PropertyPath": "/Tags/3/Value",
+                    "ExpectedValue": "CloudAndInfra",
+                    "ActualValue": "Stratus",
+                    "DifferenceType": "NOT_EQUAL"
+                }
+            ],
+            "StackResourceDriftStatus": "MODIFIED",
+            "Timestamp": "2020-05-03T22:47:11.078000+00:00"
+        }
+    ]
+}
