@@ -1,7 +1,15 @@
-# Reporting Cloudformation Drift in AWS Account
+# Ops Swiss Knife Suite
 
-Triggers Drift Detection on all Cloudformation stacks and outputs resource drift status and differences to Excel or CSV file.
+Small toolbox for generating small reports.
 
+Currently supports the following features - 
+
+  1. Detect all Cloudformation drift
+  2. Report on SSM inventory
+  3. Report on EC2 inventory 
+  4. Compares SSM and EC2 inventory to see what instances need to be configured 
+
+This can run over all regions and all customer accounts.
 
 ## Requirements 
 - [Python 3.7.5](https://docs.python-guide.org/starting/install3/osx/)
@@ -32,6 +40,7 @@ Arguments:
   * **o, output**: Specifies output file format, CSV or Excel. **Default** is Excel (xlsx)
   * **e, exclude**: Excludes specified accounts read in from your `~/.aws/config` file.
   * **m, method**: Can support Cloudformation drift, SSM inventory, EC2 inventory and SSM and EC2 inventory comparison
+    * ['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'compare-ssm-ec2-inventory']
   * **r, region**: If unspecified, runs across all regions.
 
 Try it out! Please report any bugs! 
@@ -39,16 +48,9 @@ Try it out! Please report any bugs!
 Example command - 
 
 ```bash
-$ python app.py --output xlsx --customer contact --exclude contact-identity --mode cfn-drift
-```
-
-### To output to a file
-Output can be saved as CSV or XLSX file depending on the specified extension (xlsx or csv).
-
-```bash
-$ python app.py --output xlsx --customer contact --exclude contact-identity --mode cfn-drift
+$ python app.py --output csv --customer chorus --method compare-ssm-ec2-inventory --region ap-southeast-2
+$ python app.py --output xlsx --customer contact --method cfn-drift --region ap-southeast-2
 ```
 
 
-
-Output is saved to `output` folder with file name `{account_name}-cfn-drift-report.{ext}`.
+Output is saved to `output` folder with file name `{account_name}-{method}.{ext}`.
