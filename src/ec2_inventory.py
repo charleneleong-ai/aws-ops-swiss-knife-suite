@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 5:18:14 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Monday, June 8th 2020, 7:40:33 pm
+# Last Modified: Tuesday, June 9th 2020, 11:38:46 am
 ###
 
 import os
@@ -33,8 +33,8 @@ def handler(profile, region):
      
 
 def get_ec2_inventory(region, tries=1):
-    account_id = get_account_id()
-    account_name = get_account_name()
+    account_id = get_account_id(s)
+    account_name = get_account_name(s)
     try: 
         ec2 = s.client('ec2', region_name=region)
         paginator = ec2.get_paginator('describe_instances')
@@ -51,9 +51,10 @@ def get_ec2_inventory(region, tries=1):
                 _instance['PrivateDnsName'] = instance['PrivateDnsName']
                 _instance['PublicDnsName'] = instance['PublicDnsName']
                 _instance['State'] = instance['State']['Name']
+                _instance['InstanceType'] = instance['InstanceType']
                 _instance['PlatformType'] = ''
                 try: 
-                    _instance['PlatformType'] = instance['Platform'].capitalize()
+                    _instance['PlatformType'] = instance['Platform'].capitalize() # Only shows for windows
                 except:
                     pass
                 _instance['IamInstanceProfile'] = ''
@@ -61,8 +62,11 @@ def get_ec2_inventory(region, tries=1):
                     _instance['IamInstanceProfile'] = instance['IamInstanceProfile']['Arn']
                 except:
                     pass
-                _instance['InstanceType'] = instance['InstanceType']
-                _instance['Tags'] = json.dumps(instance['Tags'], default=str)
+                _instance['Tags'] = ''
+                try: 
+                    _instance['Tags'] = json.dumps(instance['Tags'], default=str)
+                except:
+                    pass
                 _instance['MonitoringState'] = instance['Monitoring']['State']
                 global instances
                 instances.append(_instance)

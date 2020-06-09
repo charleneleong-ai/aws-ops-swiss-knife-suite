@@ -31,20 +31,24 @@ Arguments:
   * **c, customer [optional]**: Customer to filter. If not defined, will perform script on currently assumed role.
   * **o, output**: Specifies output file format, CSV or Excel. **Default** is Excel (xlsx)
   * **e, exclude**: Excludes specified accounts read in from your `~/.aws/config` file.
+  * **m, method**: Can support Cloudformation drift, SSM inventory, EC2 inventory and SSM and EC2 inventory comparison
+  * **r, region**: If unspecified, runs across all regions.
 
 Try it out! Please report any bugs! 
 
 Example command - 
 
 ```bash
-$ python app.py --output xlsx --customer contact --exclude contact-identity
+$ python app.py --output xlsx --customer contact --exclude contact-identity --mode cfn-drift
 ```
 
-### To output scan to a file
+### To output to a file
 Output can be saved as CSV or XLSX file depending on the specified extension (xlsx or csv).
 
 ```bash
-$ python app.py --output xlsx --customer contact --exclude contact-identity
+$ python app.py --output xlsx --customer contact --exclude contact-identity --mode cfn-drift
 ```
+
+
 
 Output is saved to `output` folder with file name `{account_name}-cfn-drift-report.{ext}`.

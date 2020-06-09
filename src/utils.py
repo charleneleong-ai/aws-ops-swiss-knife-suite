@@ -3,7 +3,7 @@
 ###
 # Created Date: Thursday, May 14th 2020, 2:58:25 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Monday, June 8th 2020, 5:43:04 pm
+# Last Modified: Tuesday, June 9th 2020, 11:32:35 am
 ###
 
 import boto3
@@ -56,13 +56,18 @@ def role_exists(role_name):
     return result
 
 
-def get_account_name():
-    return boto3.client('iam').list_account_aliases()['AccountAliases'][0]
+def get_account_name(session):
+    iam = boto3.client('iam')
+    if session:
+        iam = session.client('iam')
+    return iam.list_account_aliases()['AccountAliases'][0]
 
 
 
-def get_account_id():
+def get_account_id(session):
     sts = boto3.client('sts')
+    if session:
+        sts = session.client('sts')
     return sts.get_caller_identity()['Account']
 
 

@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, June 9th 2020, 8:34:33 am
+# Last Modified: Tuesday, June 9th 2020, 11:33:08 am
 ###
 
 import os
@@ -81,8 +81,8 @@ def trigger_cfn_detect_drift(stack_name, tries=1):
 
 def detect_cfn_drift_df(stack_names, region):
     cfn = s.client('cloudformation', region_name=region)
-    account_id = get_account_id()
-    account_name = get_account_name()
+    account_id = get_account_id(s)
+    account_name = get_account_name(s)
     global resources
     for stack_name in stack_names:
         res = cfn.describe_stack_resource_drifts(StackName=stack_name)

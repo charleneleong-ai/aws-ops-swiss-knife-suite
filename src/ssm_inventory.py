@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:56:06 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Monday, June 8th 2020, 7:30:47 pm
+# Last Modified: Tuesday, June 9th 2020, 11:32:49 am
 ###
 
 
@@ -23,6 +23,7 @@ from utils import get_account_id, get_account_name, get_regions, utc_to_nzst
 s = boto3.session.Session()
 instances = []
 
+
 def handler(profile, region):
     global s
     s = awsume(profile) 
@@ -35,8 +36,8 @@ def handler(profile, region):
 
 
 def get_ssm_inventory(region, tries=1):
-    account_id = get_account_id()
-    account_name = get_account_name()
+    account_id = get_account_id(s)
+    account_name = get_account_name(s)
 
     try: 
         ssm = s.client('ssm', region_name=region)
@@ -53,11 +54,15 @@ def get_ssm_inventory(region, tries=1):
                 # _instance['ComputerName'] = instance['ComputerName']
                 _instance['PlatformType'] = instance['PlatformType']
                 _instance['PlatformType'] = ''
-                if instance['PlatformType']: 
+                try:
                     _instance['PlatformType'] = instance['PlatformType']
+                except:
+                    pass
                 _instance['PlatformVersion'] = ''
-                if instance['PlatformVersion']: 
+                try:
                     _instance['PlatformVersion'] = instance['PlatformVersion']
+                except:
+                    pass
                 _instance['SSMAgentVersion'] = instance['AgentVersion']
                 _instance['IsLatestVersion'] = instance['IsLatestVersion']
                 _instance['PingStatus'] = instance['PingStatus']

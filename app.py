@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Monday, June 8th 2020, 7:04:30 pm
+# Last Modified: Tuesday, June 9th 2020, 11:44:32 am
 ###
 
 
@@ -19,7 +19,7 @@ from src.ec2_inventory import handler as ec2_inventory_handler
 from src.compare_ssm_ec2_inventory import handler as compare_ssm_ec2_inventory_handler
 from src.utils import get_profiles
 
-logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'))
+# logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'))
 
 
 OUTPUT_FOLDER = os.path.join(os.getcwd(), 'output')
@@ -38,6 +38,7 @@ def main(args):
         for ex_profile in args.exclude:
             profiles.remove(ex_profile)
     
+    profiles = profiles[11:]
     print(profiles)
 
     # ========= Building dataframe ========= #
