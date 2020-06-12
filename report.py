@@ -3,9 +3,8 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, June 9th 2020, 11:44:32 am
+# Last Modified: Wednesday, June 10th 2020, 1:36:00 pm
 ###
-
 
 import os
 import argparse
@@ -13,10 +12,10 @@ import logging
 import boto3
 import pandas as pd
 
-from src.report_cfn_drift import handler as report_cfn_drift_handler
-from src.ssm_inventory import handler as ssm_inventory_handler
-from src.ec2_inventory import handler as ec2_inventory_handler
-from src.compare_ssm_ec2_inventory import handler as compare_ssm_ec2_inventory_handler
+from src.cfn.cfn_drift import handler as cfn_drift_handler
+from src.inventory.ssm_inventory import handler as ssm_inventory_handler
+from src.inventory.ec2_inventory import handler as ec2_inventory_handler
+from src.inventory.compare_ssm_ec2_inventory import handler as compare_ssm_ec2_inventory_handler
 from src.utils import get_profiles
 
 # logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'))
@@ -38,7 +37,6 @@ def main(args):
         for ex_profile in args.exclude:
             profiles.remove(ex_profile)
     
-    profiles = profiles[11:]
     print(profiles)
 
     # ========= Building dataframe ========= #
@@ -47,7 +45,7 @@ def main(args):
         print(f'\n\n# ========= Preparing report for {profile} ========= #')
 
         if args.method == 'cfn-drift':
-            df = report_cfn_drift_handler(profile, args.region)
+            df = cfn_drift_handler(profile, args.region)
         elif args.method == 'ssm-inventory':
             df = ssm_inventory_handler(profile, args.region)
         elif args.method == 'ec2-inventory':
@@ -63,7 +61,7 @@ def main(args):
     if args.customer:
         account_name = args.customer
         
-    output_report(df=df, 
+    output_report(df=df,
                     account_name=account_name, 
                     report_name=args.method, 
                     ext=args.output, 

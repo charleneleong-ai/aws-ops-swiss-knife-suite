@@ -3,7 +3,7 @@
 ###
 # Created Date: Thursday, May 14th 2020, 2:58:25 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, June 9th 2020, 11:32:35 am
+# Last Modified: Thursday, June 11th 2020, 3:46:21 pm
 ###
 
 import boto3
@@ -21,8 +21,9 @@ def utc_to_nzst(utc_dt):
     return utc_dt.replace(tzinfo=pytz.utc).astimezone(nzst)
 
 
-def get_regions(service):
+def get_regions(service, session=None):
     regions = boto3.session.Session().get_available_regions(service)
+    if session: regions = session.get_available_regions(service)
     regions.remove('ap-east-1')  # Not available to call
     regions.remove('me-south-1')
     regions.remove('af-south-1')
@@ -46,8 +47,9 @@ def without(d, key):
     return new_d
 
 
-def role_exists(role_name):
+def role_exists(role_name, session=None):
     iam = boto3.client('iam')
+    if session: iam = session.client('iam')
     try:
         iam.get_role(RoleName=role_name)
         result = True
@@ -56,24 +58,23 @@ def role_exists(role_name):
     return result
 
 
-def get_account_name(session):
+def get_account_name(session=None):
     iam = boto3.client('iam')
-    if session:
-        iam = session.client('iam')
+    if session: iam = session.client('iam')
     return iam.list_account_aliases()['AccountAliases'][0]
 
 
 
-def get_account_id(session):
+def get_account_id(session=None):
     sts = boto3.client('sts')
-    if session:
-        sts = session.client('sts')
+    if session: sts = session.client('sts')
     return sts.get_caller_identity()['Account']
 
 
 
-def list_children(ou_id, child_type):
+def list_children(ou_id, child_type, session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     children = []
     paginator = org.get_paginator('list_children')
     for page in paginator.paginate(ParentId=ou_id, ChildType=child_type):
@@ -82,8 +83,9 @@ def list_children(ou_id, child_type):
 
 
 
-def list_org_roots():
+def list_org_roots(session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     value = None
     try:
         root_info = org.list_roots()
@@ -97,8 +99,9 @@ def list_org_roots():
 
 
 
-def list_all_ou():
+def list_all_ou(session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     org_info = list()
     root_id = list_org_roots()
     
@@ -111,8 +114,9 @@ def list_all_ou():
 
 
 
-def get_ou_map():
+def get_ou_map(session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     ou_list = list_all_ou()
     ou_map = {}
     for ou_item in ou_list:
@@ -158,8 +162,9 @@ def get_ou_id(ou_info):
 
 
 
-def list_of_accounts_in_ou(ou_id):
+def list_of_accounts_in_ou(ou_id, session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     result = []
     account_map = {}
     try:
@@ -175,17 +180,21 @@ def list_of_accounts_in_ou(ou_id):
 
 
 
-def is_master():
+def is_master(session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     master_account_id = org.describe_organization()['Organization']['MasterAccountId']
     return(master_account_id == get_account_id())
 
 
 
-def ou_exists(ou_name):
+def ou_exists(ou_name, session=None):
     org = boto3.client('organizations')
+    if session: org = session.client('organizations')
     ous = org.list_organizational_units_for_parent(ParentId=list_org_roots())['OrganizationalUnits']
     for ou in ous:
         if ou['Name'] == ou_name:
             return True
     return False
+
+

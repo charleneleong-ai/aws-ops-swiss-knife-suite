@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 5:18:14 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, June 9th 2020, 11:38:46 am
+# Last Modified: Thursday, June 11th 2020, 4:32:17 pm
 ###
 
 import os
@@ -16,7 +16,12 @@ import time
 import pandas as pd
 from awsume.awsumepy import awsume
 
-from utils import get_account_id, get_account_name, utc_to_nzst, get_regions
+from src.utils import (
+    get_account_id,
+    get_account_name,
+    get_regions,
+    utc_to_nzst
+)
 
 s = boto3.session.Session()
 instances = []

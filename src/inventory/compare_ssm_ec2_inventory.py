@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 6:55:49 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, June 9th 2020, 11:43:57 am
+# Last Modified: Thursday, June 11th 2020, 3:47:54 pm
 ###
 
 
@@ -17,10 +17,8 @@ import time
 import pandas as pd
 from awsume.awsumepy import awsume
 
-from ssm_inventory import handler as ssm_inventory_handler
-from ec2_inventory import handler as ec2_inventory_handler
-from utils import get_account_id, get_account_name, get_regions, utc_to_nzst
-
+from src.inventory.ssm_inventory import handler as ssm_inventory_handler
+from src.inventory.ec2_inventory import handler as ec2_inventory_handler
 
 s = boto3.session.Session()
 
@@ -32,9 +30,6 @@ def handler(profile, region):
     
     ssm_inventory = ssm_inventory_handler(profile, region)
     ec2_inventory = ec2_inventory_handler(profile, region)
-    
-    
-    print(ssm_inventory.shape, ec2_inventory.shape)
     
     if ssm_inventory.shape == (0, 0):   # No instances in SSM
         df = ec2_inventory

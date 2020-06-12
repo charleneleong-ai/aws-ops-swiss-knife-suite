@@ -48,8 +48,8 @@ Try it out! Please report any bugs!
 Example command - 
 
 ```bash
-$ python app.py --output csv --customer chorus --method compare-ssm-ec2-inventory --region ap-southeast-2
-$ python app.py --output xlsx --customer contact --method cfn-drift --region ap-southeast-2
+$ python report.py --output csv --customer chorus --method compare-ssm-ec2-inventory --region ap-southeast-2
+$ python report.py --output xlsx --customer contact --method cfn-drift --region ap-southeast-2
 ```
 
 

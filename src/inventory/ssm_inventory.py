@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:56:06 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, June 9th 2020, 11:32:49 am
+# Last Modified: Thursday, June 11th 2020, 4:23:32 pm
 ###
 
 
@@ -18,7 +18,12 @@ import time
 import pandas as pd
 from awsume.awsumepy import awsume
 
-from utils import get_account_id, get_account_name, get_regions, utc_to_nzst
+from src.utils import (
+    get_account_id,
+    get_account_name,
+    get_regions,
+    utc_to_nzst
+)
 
 s = boto3.session.Session()
 instances = []
@@ -38,11 +43,9 @@ def handler(profile, region):
 def get_ssm_inventory(region, tries=1):
     account_id = get_account_id(s)
     account_name = get_account_name(s)
-
     try: 
         ssm = s.client('ssm', region_name=region)
         paginator = ssm.get_paginator('describe_instance_information')
-    
         print(f'Processing SSM inventory data from {account_name} {account_id} in {region}')
         for res in paginator.paginate():
             for instance in res['InstanceInformationList']:
