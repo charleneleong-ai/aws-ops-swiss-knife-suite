@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 6:55:49 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Thursday, June 11th 2020, 3:47:54 pm
+# Last Modified: Friday, June 19th 2020, 1:46:11 pm
 ###
 
 
@@ -19,6 +19,13 @@ from awsume.awsumepy import awsume
 
 from src.inventory.ssm_inventory import handler as ssm_inventory_handler
 from src.inventory.ec2_inventory import handler as ec2_inventory_handler
+
+from src.utils import (
+    get_account_id,
+    get_account_name,
+    get_regions,
+    utc_to_nzst
+)
 
 s = boto3.session.Session()
 
@@ -48,9 +55,10 @@ def handler(profile, region):
                 'PingStatus', 'LastPingDateTime', 'IPAddress', 'PrivateDnsName', 'PublicDnsName', 
                 'InstanceType', 'Tags', 'MonitoringState']
         df = df[cols]
-        
-    df = df.sort_values('State')
+    
+    if df.empty: 
+        return df
 
-    return df
+    return df.sort_values('State')
 
 
