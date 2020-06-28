@@ -8,7 +8,6 @@ Currently supports the following features -
   2. Report on SSM inventory
   3. Report on EC2 inventory 
   4. Compares SSM and EC2 inventory to see what instances need to be configured
-  5. Delete Default VPCs from all regions 
 
 This can run over all regions and all customer accounts.
 
