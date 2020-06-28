@@ -76,10 +76,6 @@ def delete_vpc_resources(vpc, vpcid, client, resource):
         for rta in rt.associations:
             if not rta.main:
                 rta.delete()
-    # delete any instances
-    for subnet in vpc.subnets.all():
-        for instance in subnet.instances.all():
-            instance.terminate()
     # delete our endpoints
     for ep in client.describe_vpc_endpoints(
             Filters=[{
