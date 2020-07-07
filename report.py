@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Friday, June 26th 2020, 2:34:15 pm
+# Last Modified: Tuesday, July 7th 2020, 1:19:42 pm
 ###
 
 import os
@@ -12,7 +12,7 @@ import logging
 import boto3
 import pandas as pd
 
-# from src.cfn.cfn_drift import handler as cfn_drift_handler
+from src.cfn.cfn_drift import handler as cfn_drift_handler
 from src.inventory.ssm_inventory import handler as ssm_inventory_handler
 from src.inventory.ec2_inventory import handler as ec2_inventory_handler
 from src.inventory.compare_ssm_ec2_inventory import handler as compare_ssm_ec2_inventory_handler
@@ -45,16 +45,16 @@ def main(args):
     for profile in profiles:
         print(f'\n\n# ========= Preparing report for {profile} ========= #')
 
-        # if args.method == 'cfn-drift':
-        #     # df = cfn_drift_handler(profile, args.region)
-        if args.method == 'ssm-inventory':
+        if args.method == 'cfn-drift':
+            df = cfn_drift_handler(profile, args.region)
+        elif args.method == 'ssm-inventory':
             df = ssm_inventory_handler(profile, args.region)
         elif args.method == 'ec2-inventory':
             df = ec2_inventory_handler(profile, args.region)
         elif args.method == 'compare-ssm-ec2-inventory':
             df = compare_ssm_ec2_inventory_handler(profile, args.region)
-        elif args.method == 'delete-default-vpcs':
-            df = delete_default_vpcs_handler(profile, args.region)
+        # elif args.method == 'delete-default-vpcs':
+        #     df = delete_default_vpcs_handler(profile, args.region)
         
         customer_df = pd.concat([customer_df, df])
 
