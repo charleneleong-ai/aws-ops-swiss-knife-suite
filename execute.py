@@ -3,7 +3,7 @@
 ###
 # Created Date: Tuesday, June 9th 2020, 2:49:45 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Friday, June 12th 2020, 9:15:50 am
+# Last Modified: Friday, June 26th 2020, 3:05:56 pm
 ###
 
 import os
@@ -19,6 +19,7 @@ from src.utils import get_profiles
 # logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO'))
 
 OUTPUT_FOLDER = os.path.join(os.getcwd(), 'output')
+TEMPLATE_PATH = os.path.join(os.getcwd(), 'templates', 'saml-app-config.yml')
 
 
 def main(args):
@@ -36,14 +37,21 @@ def main(args):
     
     print(profiles)
 
+    # ========= Checking arguments ========= #
+    if not os.path.exists(TEMPLATE_PATH):
+        os.makedirs(TEMPLATE_PATH)
+    
+    param_file = args.param_file if args.param_file else None
+    
+
     # ========= Building dataframe ========= #
     customer_df = pd.DataFrame()
     for profile in profiles:
         print(f'\n\n# ========= Preparing report for {profile} ========= #')
         if args.method == 'create-changeset':
-            df = create_changeset_handler(profile, args.region)
+            df = create_changeset_handler(profile, args.region, stack_name, template, param_file)
         if args.method == 'create-stack':
-            df = create_update_stack_handler(profile, args.region)
+            df = create_update_stack_handler(profile, args.region, stack_name, template, params_file)
 
     # ========= Outputing the results to a report ========= #
     if not os.path.exists(OUTPUT_FOLDER):
@@ -56,7 +64,6 @@ def main(args):
                     report_name=args.method, 
                     ext=args.output, 
                     sheet_name=args.method.replace('-', '').capitalize())
-    
     
 
 
@@ -82,5 +89,9 @@ if __name__ == '__main__':
     parser.add_argument('-o', '--output', default='xlsx',  metavar='xlsx', choices=['xlsx', 'csv'], help='Output File Format - xlsx [default] or csv')
     parser.add_argument('-m', '--method', choices=['create-changeset', 'create-stack', 'update-stack'], help='Method of operation')
     parser.add_argument('-r', '--region', help='If unspecified, runs across all regions.')
+
+    parser.add_argument('--template', metavar='CloudFormation Template path', default=TEMPLATE_PATH,
+                        help='The path to CloudFormation template path')
+    parser.add_argument('--params-file', metavar='Parameters file path', help='The parameter file')
     args = parser.parse_args()
     main(args)

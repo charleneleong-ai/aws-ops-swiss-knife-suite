@@ -4,10 +4,11 @@ Small toolbox for generating small reports.
 
 Currently supports the following features - 
 
-  1. Detect all Cloudformation drift
-  2. Report on SSM inventory
-  3. Report on EC2 inventory 
-  4. Compares SSM and EC2 inventory to see what instances need to be configured 
+  1. Detect all Cloudformation drift and option to output to report
+  2. Report on SSM inventory and option to output to report
+  3. Report on EC2 inventory and option to output to report
+  4. Compares SSM and EC2 inventory to see what instances need to be configured and option to output to report
+  5. Execute a changeset over a set of customer accounts
 
 This can run over all regions and all customer accounts.
 

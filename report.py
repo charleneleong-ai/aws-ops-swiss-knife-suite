@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Wednesday, June 10th 2020, 1:36:00 pm
+# Last Modified: Friday, June 26th 2020, 2:34:15 pm
 ###
 
 import os
@@ -36,9 +36,9 @@ def main(args):
     if args.exclude:
         for ex_profile in args.exclude:
             profiles.remove(ex_profile)
-    
-    print(profiles)
 
+    print(profiles)
+    
     # ========= Building dataframe ========= #
     customer_df = pd.DataFrame()
     for profile in profiles:
