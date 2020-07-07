@@ -41,7 +41,7 @@ Arguments:
   * **o, output**: Specifies output file format, CSV or Excel. **Default** is Excel (xlsx)
   * **e, exclude**: Excludes specified accounts read in from your `~/.aws/config` file.
   * **m, method**: Can support Cloudformation drift, SSM inventory, EC2 inventory and SSM and EC2 inventory comparison
-    * ['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'compare-ssm-ec2-inventory']
+    * ['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'compare-ssm-ec2-inventory', 'delete-default-vpcs']
   * **r, region**: If unspecified, runs across all regions.
 
 Try it out! Please report any bugs! 
