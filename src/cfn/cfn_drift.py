@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Friday, June 12th 2020, 1:44:18 pm
+# Last Modified: Tuesday, July 7th 2020, 1:22:05 pm
 ###
 
 import os
@@ -51,7 +51,7 @@ def get_stack_names(region, tries=1):
         for res in response_iterator:
             for stack in res['StackSummaries']:
                 stack_names.append(stack['StackName'])
-        print(f'{len(stack_names)} stacks found in {account_name} {region}\n===================\n')
+        print(f'\n{len(stack_names)} stacks found in {account_name} {region}\n===================')
         with ThreadPool(processes=5) as pool:
             t = pool.map(trigger_cfn_detect_drift, stack_names)
             
