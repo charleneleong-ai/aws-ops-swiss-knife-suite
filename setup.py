@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Monday, June 8th 2020, 1:18:13 pm
+# Last Modified: Tuesday, July 7th 2020, 1:54:34 pm
 ###
 
 
@@ -37,7 +37,7 @@ setuptools.setup(
     name="ops-swiss-knife-suite",
     version="0.0.1",
 
-    description="Suite of tools for easier management customer accounts",
+    description="Suite of tools for easier management of customer accounts",
     long_description=long_description,
     long_description_content_type="text/markdown",
 

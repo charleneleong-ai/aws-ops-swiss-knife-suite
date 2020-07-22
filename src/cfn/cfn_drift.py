@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, July 7th 2020, 1:22:05 pm
+# Last Modified: Tuesday, July 21st 2020, 2:21:32 pm
 ###
 
 import os
@@ -25,9 +25,12 @@ s = boto3.session.Session()
 resources = []
 
 
-def handler(profile, region):
+def handler(profile, region, dryrun):
     global s
     s = awsume(profile)
+    global run
+    run = dryrun
+    
     regions = [region] if region else get_regions('cloudformation')
     for region in regions:
         stack_names = get_stack_names(region)

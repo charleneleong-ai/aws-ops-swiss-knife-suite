@@ -3,7 +3,7 @@
 ###
 # Created Date: Thursday, June 11th 2020, 2:56:57 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Friday, June 12th 2020, 1:46:32 pm
+# Last Modified: Tuesday, July 21st 2020, 2:01:58 pm
 ###
 
 import boto3
@@ -62,3 +62,4 @@ def cfn_delete(stack_name, session=None):
     if session: cfn = session.client('cloudformation')
     cfn.delete_stack(StackName=stack_name)
     print(f'\nCleaning up resources for {stack_name}...')
+
