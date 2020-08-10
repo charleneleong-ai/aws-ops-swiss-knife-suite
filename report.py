@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, August 11th 2020, 2:46:44 am
+# Last Modified: Tuesday, August 11th 2020, 3:15:21 am
 ###
 
 import os
@@ -62,22 +62,23 @@ def main(args):
         # elif args.method == 'delete-default-vpcs':
         #     df = delete_default_vpcs_handler(profile, args.region)
         elif args.method == 'clean-lambda-versions':
-            df = clean_lambda_versions_handler(profile, args.region, args.dryrun, args.output)
-            
-        customer_df = pd.concat([customer_df, df])
+            df = clean_lambda_versions_handler(profile, args.region, args.mode, args.output)
+        
+        if args.output:
+            customer_df = pd.concat([customer_df, df])
 
     # ========= Outputing the results to a report ========= #
-    if not os.path.exists(OUTPUT_FOLDER):
-        os.makedirs(OUTPUT_FOLDER)
-    if args.customer:
-        account_name = args.customer
-        
-    output_report(df=df,
-                    account_name=account_name, 
-                    report_name=args.method, 
-                    ext=args.output, 
-                    sheet_name=args.method.replace('-', '').capitalize())
-        
+    if args.output:
+        if not os.path.exists(OUTPUT_FOLDER):
+            os.makedirs(OUTPUT_FOLDER)
+        if args.customer:
+            account_name = args.customer
+        output_report(df=customer_df,
+                        account_name=account_name, 
+                        report_name=args.method, 
+                        ext=args.output, 
+                        sheet_name=args.method.replace('-', '').capitalize())
+            
 
 
 def output_report(df, account_name, report_name, ext, sheet_name):
@@ -100,10 +101,10 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--customer', metavar='customer', default='', help='Customer to filter') 
     parser.add_argument('-e', '--exclude', metavar='account-name',  nargs='+', default='', help='Exclude certain accounts') 
     parser.add_argument('-o', '--output', default=None, choices=['xlsx', 'csv', None], help='Output File Format - xlsx [default] or csv')
-    parser.add_argument('-m', '--method', 
+    parser.add_argument('-mt', '--method', 
                         choices=['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'compare-ssm-ec2-inventory', 'delete-default-vpcs', 'clean-lambda-versions'], 
                         help='Method of operation')
-    parser.add_argument('-dr', '--dryrun', choices=[True, False], default=False, help='Dry run')
+    parser.add_argument('-m', '--mode', metavar='scan', choices=['scan', 'run'], default='scan', help='Checks whether to perform a scan or run')
     parser.add_argument('-r', '--region', help='If unspecified, runs across all regions.')
     args = parser.parse_args()
     main(args)
