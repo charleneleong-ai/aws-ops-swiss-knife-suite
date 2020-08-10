@@ -3,10 +3,11 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, July 21st 2020, 4:22:23 pm
+# Last Modified: Tuesday, August 11th 2020, 2:46:44 am
 ###
 
 import os
+import sys
 import argparse
 import logging
 import boto3
@@ -32,9 +33,13 @@ def main(args):
         profiles = get_profiles(args.customer)
         print(f'Loading accounts for the customer [ {args.customer} ] from AWS config')
     else:
-        account_name = boto3.client('iam').list_account_aliases()['AccountAliases'][0]
-        profiles = [account_name]
-
+        if os.getenv('AWSUME_PROFILE'):
+            account_name = os.getenv('AWSUME_PROFILE')
+            profiles = [account_name]
+        else:
+            print('\nPlease assume a role via awsume.\nawsume <PROFILE_NAME> -a\n')
+            sys.exit(1)
+            
     if args.exclude:
         for ex_profile in args.exclude:
             profiles.remove(ex_profile)
