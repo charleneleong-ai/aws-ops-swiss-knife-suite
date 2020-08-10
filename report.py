@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, August 11th 2020, 3:15:21 am
+# Last Modified: Tuesday, August 11th 2020, 3:21:06 am
 ###
 
 import os
@@ -47,9 +47,13 @@ def main(args):
     print(profiles)
     
     # ========= Building dataframe ========= #
-    customer_df = pd.DataFrame()
+    if args.output: 
+        customer_df = pd.DataFrame()
     for profile in profiles:
-        print(f'\n\n# ========= Preparing report for {profile} ========= #')
+        if args.mode == 'scan':
+                print(f'\n\n# ========= Executing {args.method} in scan mode on {account_name} ========= #')
+        else:
+            print(f'\n\n# ========= Executing {args.method} on {account_name} ========= #')
 
         if args.method == 'cfn-drift':
             df = cfn_drift_handler(profile, args.region)
