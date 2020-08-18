@@ -7,8 +7,9 @@ Currently supports the following features -
   1. Detect all Cloudformation drift
   2. Report on SSM inventory
   3. Report on EC2 inventory
-  4. Compares SSM and EC2 inventory to see what instances need to be configured
-  5. Cleans old Lambda versions except for the last 5 versions.
+  4. Report on EBS inventory
+  5. Compares SSM and EC2 inventory to see what instances need to be configured
+  6. Cleans old Lambda versions except for the last 5 versions.
   <!-- 5. Execute a changeset over a set of customer accounts -->
 
 This can run over all regions and all customer accounts.
@@ -42,7 +43,7 @@ Arguments:
   * **o, output**: Specifies output file format, CSV or Excel. **Default** is Excel (xlsx)
   * **e, exclude**: Excludes specified accounts read in from your `~/.aws/config` file.
   * **mt, method**: Can support Cloudformation drift, SSM inventory, EC2 inventory and SSM and EC2 inventory comparison
-    * ['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'compare-ssm-ec2-inventory', 'clean-lambda-versions']
+    * ['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'ebs-inventory', 'compare-ssm-ec2-inventory', 'clean-lambda-versions']
   * **m, mode**: **Default** is scan mode. Choose whether to run in scan or run mode. If in run mode, will execute the checks.  
   * **r, region**: If unspecified, runs across all regions.
 

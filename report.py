@@ -3,7 +3,7 @@
 ###
 # Created Date: Monday, June 8th 2020, 12:53:50 pm
 # Author: Charlene Leong charleneleong84@gmail.com
-# Last Modified: Tuesday, August 11th 2020, 3:21:06 am
+# Last Modified: Wednesday, August 12th 2020, 3:41:32 pm
 ###
 
 import os
@@ -16,6 +16,7 @@ import pandas as pd
 from src.cfn.cfn_drift import handler as cfn_drift_handler
 from src.inventory.ssm_inventory import handler as ssm_inventory_handler
 from src.inventory.ec2_inventory import handler as ec2_inventory_handler
+from src.inventory.ebs_inventory import handler as ebs_inventory_handler
 from src.inventory.compare_ssm_ec2_inventory import handler as compare_ssm_ec2_inventory_handler
 from src.ec2.delete_default_vpcs import handler as delete_default_vpcs_handler
 from src._lambda.clean_lambda_versions import handler as clean_lambda_versions_handler
@@ -43,17 +44,20 @@ def main(args):
     if args.exclude:
         for ex_profile in args.exclude:
             profiles.remove(ex_profile)
-
+    
     print(profiles)
     
     # ========= Building dataframe ========= #
+    if 'inventory' in args.method:
+        args.output = 'xlsx'
+        args.mode = 'run'
     if args.output: 
         customer_df = pd.DataFrame()
     for profile in profiles:
         if args.mode == 'scan':
-                print(f'\n\n# ========= Executing {args.method} in scan mode on {account_name} ========= #')
+            print(f'\n\n# ========= Executing {args.method} in scan mode on {profile} ========= #')
         else:
-            print(f'\n\n# ========= Executing {args.method} on {account_name} ========= #')
+            print(f'\n\n# ========= Executing {args.method} on {profile} ========= #')
 
         if args.method == 'cfn-drift':
             df = cfn_drift_handler(profile, args.region)
@@ -61,13 +65,15 @@ def main(args):
             df = ssm_inventory_handler(profile, args.region)
         elif args.method == 'ec2-inventory':
             df = ec2_inventory_handler(profile, args.region)
+        elif args.method == 'ebs-inventory':
+            df = ebs_inventory_handler(profile, args.region)
         elif args.method == 'compare-ssm-ec2-inventory':
             df = compare_ssm_ec2_inventory_handler(profile, args.region)
         # elif args.method == 'delete-default-vpcs':
         #     df = delete_default_vpcs_handler(profile, args.region)
         elif args.method == 'clean-lambda-versions':
             df = clean_lambda_versions_handler(profile, args.region, args.mode, args.output)
-        
+
         if args.output:
             customer_df = pd.concat([customer_df, df])
 
@@ -106,7 +112,8 @@ if __name__ == '__main__':
     parser.add_argument('-e', '--exclude', metavar='account-name',  nargs='+', default='', help='Exclude certain accounts') 
     parser.add_argument('-o', '--output', default=None, choices=['xlsx', 'csv', None], help='Output File Format - xlsx [default] or csv')
     parser.add_argument('-mt', '--method', 
-                        choices=['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'compare-ssm-ec2-inventory', 'delete-default-vpcs', 'clean-lambda-versions'], 
+                        choices=['cfn-drift', 'ssm-inventory', 'ec2-inventory', 'ebs-inventory', 'compare-ssm-ec2-inventory', 
+                                'delete-default-vpcs', 'clean-lambda-versions'], 
                         help='Method of operation')
     parser.add_argument('-m', '--mode', metavar='scan', choices=['scan', 'run'], default='scan', help='Checks whether to perform a scan or run')
     parser.add_argument('-r', '--region', help='If unspecified, runs across all regions.')
